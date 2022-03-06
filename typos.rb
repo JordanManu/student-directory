@@ -26,13 +26,19 @@ def print_header
 end
 
 def print(students)
+  if students.count < 1
+    puts "There are no students"
+  else
   students.each do |student|
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  end
   end
 end
 
 def print_footer(students)
+  if students.count > 1
   puts "Overall, we have #{students.count} great students"
+  end
 end
 
 
